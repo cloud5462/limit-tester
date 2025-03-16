@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="dashboardContainer" style="display:none;">
+        <h2>Welcome, Dillip Kumar Padhan</h2>
+        <p>Access granted to test your bank limit.</p>
+        <button onclick="showBankDetails()">Fill Up Bank Details</button>
+    </div>
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <p class="message" id="loginMessage"></p>
+    </div>
+    <div class="container" id="bankContainer" style="display:none;">
+        <h2>Bank Details Form</h2>
+        <select id="bankName" required>
+            <option value="" disabled selected>Select Your Bank</option>
+            <option>HDFC Bank</option>
+            <option>State Bank of India</option>
+            <option>ICICI Bank</option>
+            <option>Axis Bank</option>
+            <option>Bank of Baroda</option>
+            <option>Kotak Mahindra Bank</option>
+            <option>Union Bank of India</option>
+            <option>Punjab National Bank</option>
+            <option>Canara Bank</option>
+            <option>Bank of India</option>
+            <option>IndusInd Bank</option>
+            <option>Indian Bank</option>
+            <option>IDBI</option>
+            <option>Yes Bank</option>
+            <option>IDFC FIRST Bank</option>
+            <option>Federal Bank</option>
+            <option>Central Bank of India</option>
+            <option>Bandhan Bank</option>
+            <option>Indian Overseas Bank</option>
+            <option>Bank of Maharashtra</option>
+        </select>
+        <input type="text" id="accountNumber" placeholder="Account Number" minlength="9" maxlength="18" required>
+        <input type="text" id="ifscCode" placeholder="IFSC Code" required>
+        <input type="text" id="accountHolder" placeholder="Account Holder Name" required>
+        <button onclick="validateForm(event)">Submit</button>
+        <p class="message" id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
